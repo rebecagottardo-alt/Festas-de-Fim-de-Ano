@@ -14,16 +14,25 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// Validação do formulário
-const form = document.getElementById("contatoForm");
-if (form) {
-  form.addEventListener("submit", (e) => {
-    const email = form.email.value;
-    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("contatoForm");
 
-    if (!regex.test(email)) {
-      alert("Digite um e-mail válido!");
-      e.preventDefault();
-    }
-  });
-}
+  if (form) {
+    form.addEventListener("submit", (e) => {
+      const email = form.email.value.trim();
+      const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+      if (!regex.test(email)) {
+        alert("Digite um e-mail válido!");
+        e.preventDefault(); // impede recarregar
+        return;
+      }
+
+      // Se for só um formulário visual, sem backend:
+      e.preventDefault(); 
+      alert("Formulário enviado com sucesso!");
+    });
+  }
+});
+
+
