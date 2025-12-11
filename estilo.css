@@ -10,8 +10,6 @@
     --font-corpo: 'Roboto', sans-serif;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;700&display=swap');
-
 * {
     margin: 0;
     padding: 0;
@@ -364,6 +362,7 @@ h3 { font-size: 1.5em; }
     color: var(--cor-vermelho-principal); 
     font-weight: 700;
 }
+
 
 
 }
